@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TT Lakes';
-    src: url('./fonts/TT-Lakes-Variable.woff2') format('woff2');
+    src: url("./fonts/TTLakes-Regular.woff") format('woff');
     font-weight: 400;
 }
 
@@ -102,9 +102,72 @@ ul {
     border-radius: 0 4px 4px 0;
 }
 
+.main__nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.main__nav::-webkit-scrollbar {
+    display: none;
+}
+
 .main__menu {
     display: flex;
-    overflow-x: auto;
     gap: 16px;
-    padding: 24px 16px;
+    padding: 5px 16px;
+    width: max-content;
+}
+
+.main__link {
+    display: block;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #7e7e82;
+    white-space: nowrap;
+}
+
+.main__link--active {
+    background: #ffffff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__content {
+    padding: 16px;
+}
+
+.about__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #1b1c21;
+}
+
+.about__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.about__arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.about__image {
+    margin-top: 10px;
+}
+
+.about__image img{
+    width: 100%;
+    display: block;
 }
