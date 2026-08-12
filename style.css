@@ -60,14 +60,16 @@ ul {
 }
 
 .header__btn {
-    background-color: #ff3e79;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.header__btn img {
+    display: block;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .header__btn--phone,
@@ -81,6 +83,15 @@ ul {
     height: 32px;
     background: #eaeaea;
     border-radius: 1px;
+}
+
+.header__divider--logo,
+.header__divider--menu {
+    display: none;
+}
+
+.header__divider--middle {
+    display: block;
 }
 
 .main__title {
@@ -102,6 +113,10 @@ ul {
     border-radius: 0 4px 4px 0;
 }
 
+.main__actions {
+    display: none;
+}
+
 .main__nav {
     overflow-x: auto;
     scrollbar-width: none;
@@ -118,6 +133,14 @@ ul {
     width: max-content;
 }
 
+.main__item--brands,
+.main__item--prices,
+.main__item--addresses,
+.main__item--special,
+.main__item--reviews {
+    display: none;
+}
+
 .main__link {
     display: block;
     padding: 8px 16px;
@@ -127,10 +150,17 @@ ul {
     white-space: nowrap;
 }
 
-.main__link--active {
+.main__link--mobile-active {
     background: #ffffff;
     border: 2px solid #b8ffec;
     border-radius: 6px;
+}
+
+.main__link--desktop-active {
+    background: #ffffff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+    display: none;
 }
 
 .about {
@@ -149,11 +179,17 @@ ul {
     color: #1b1c21;
 }
 
+.about__text--tablet,
+.about__text--pc {
+    display: none;
+}
+
 .about__button {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-top: 14px;
+    font-family: 'TT Lakes', sans-serif;
     font-size: 16px;
     font-weight: 500;
 }
@@ -170,4 +206,130 @@ ul {
 .about__image img{
     width: 100%;
     display: block;
+}
+
+@media (min-width:768px) {
+    .header__btn--phone,
+    .header__btn--chat,
+    .header__btn--profile {
+        display: flex;
+    }
+    .header__container {
+        padding: 18px 24px;
+    }
+    .header__divider--logo,
+    .header__divider--menu {
+        display: block;
+    }
+    .header__divider--middle {
+        display: none;
+    }
+    .main__item--prices,
+    .main__item--special {
+        display: block;
+    }
+    .about {
+        flex-direction: row;
+        gap: 48px;
+        padding: 24px;
+    }
+    .about__content {
+        flex: 1;
+    }
+    .about__image {
+        flex: 1;
+        margin-top: 0;
+    }
+    .about__text--tablet{
+        display: block;
+        margin-top: 18px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .header {
+        display: none;
+    }
+    .main__container {
+        position: relative;
+        padding: 0 10px;
+    }
+    .main__title {
+        padding: 18px 26px;
+    }
+    .main__title::before {
+        width: 3px;
+    }
+    .main__actions {
+        display: flex;
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        gap: 24px;
+        align-items: center;
+    }
+    .main__settings,
+    .main__search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #1b1c21;
+    }
+    .main__nav {
+        overflow-x: visible;
+    }
+    .main__menu {
+        width: 100%;
+        justify-content: space-between;
+        padding: 4px 26px;
+        gap: 8px 16px;;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__link {
+        font-size: 15px;
+    }
+    .main__item--brands,
+    .main__item--addresses,
+    .main__item--special,
+    .main__item--reviews {
+        display: block;
+    }
+    .main__item--services {
+        display: none;
+    }
+    .main__link--mobile-active {
+        background: transparent;
+        border: none;
+    }
+    .main__link--desktop-active {
+        display: block;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 0 24px;
+    }
+    .about__content {
+        flex: 1;
+        padding: 10px 0 0 10px;
+    }
+    .about__image {
+        flex: 1;
+        margin-top: 0;
+    }
+    .about__image img {
+        width: 100%;
+        height: auto;
+    }
+    .about__text--pc {
+        display: block;
+    }
+    
 }

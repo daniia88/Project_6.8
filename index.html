@@ -13,12 +13,15 @@
                 <button class="header__btn header__btn--options">
                     <img src="./images/options.svg" alt="CPS Options">
                 </button>
+
+                <div class="header__divider header__divider--logo"></div>
+
                 <a href="#" class="header__logo">
                     <img src="./images/cps_logo.svg" alt="CPS Logo">
                 </a>
             </div>
 
-            <div class="header__divider"></div>
+            <div class="header__divider header__divider--middle"></div>
 
             <div class="header__right">
                 <button class="header__btn header__btn--phone">
@@ -30,6 +33,9 @@
                 <button class="header__btn header__btn--profile">
                     <img src="./images/profile.svg" alt="CPS Profile">
                 </button>
+                
+                <div class="header__divider header__divider--menu"></div>
+
                 <button class="header__btn header__btn--settings">
                     <img src="./images/settings.svg" alt="CPS Settings">
                 </button>
@@ -44,11 +50,34 @@
         <div class="main__container">
             <h1 class="main__title">Услуги и сервисы</h1>
 
+            <div class="main__actions">
+                <button class="main__settings">
+                    <span>Оставить заявку</span>
+                    <img src="./images/settings.svg" alt="CPS Settings">
+                </button>
+
+                <button class="main__search">
+                    <span>Статус ремонта</span>
+                    <img src="./images/search.svg" alt="CPS Search">
+                </button>
+            </div>
+
             <nav class="main__nav">
                 <ul class="main__menu">
-                    <li class="main__item"><a href="#" class="main__link main__link--active">Ремонтируемые устройства</a></li>
-                    <li class="main__item"><a href="#" class="main__link">Дополнительные услуги</a></li>
-                    <li class="main__item"><a href="#" class="main__link">Цены на услуги</a></li>
+                    <li class="main__item main__item--brands">
+                        <a href="#" class="main__link main__link--desktop-active">Ремонтируемые бренды</a></li>
+                    <li class="main__item main__item--devices">
+                        <a href="#" class="main__link main__link--mobile-active">Ремонтируемые устройства</a></li>
+                    <li class="main__item main__item--services">
+                        <a href="#" class="main__link">Дополнительные услуги</a></li>
+                    <li class="main__item main__item--prices">
+                        <a href="#" class="main__link">Цены на услуги</a></li>
+                    <li class="main__item main__item--addresses">
+                        <a href="#" class="main__link">Адреса сервисных центров</a></li>
+                    <li class="main__item main__item--special">
+                        <a href="#" class="main__link">Специальные цены</a></li>
+                    <li class="main__item main__item--reviews">
+                        <a href="#" class="main__link">Отзывы</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,6 +86,14 @@
             <div class="about__content">
                 <p class="about__text">
                     Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                </p>
+
+                <p class="about__text about__text--tablet">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. 
+                </p>
+
+                <p class="about__text about__text--pc">    
+                    Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                 </p>
 
                 <button class="about__button">
